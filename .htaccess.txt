@@ -1,0 +1,32 @@
+ # BEGIN htaccess
+# Protect the htaccess file
+ 
+Order Allow,Deny
+Deny from all
+ 
+# Protect the htaccess file
+ 
+Order Allow,Deny
+Deny from all
+ 
+# Disable directory browsing
+Options All -Indexes
+ 
+# Enable the following of symlinks
+Options +FollowSymLinks
+ 
+# No ETags, No Pragma
+Header unset Pragma
+Header unset ETag
+# Make sure proxies deliver correct content
+Header append Vary User-Agent env=!dont-vary
+# Ensure proxies deliver compressed content correctly
+Header append Vary Accept-Encoding
+ 
+Order allow, deny
+Deny from 123.123.123.123
+Allow from all
+
+ErrorDocument 404 /404.html
+
+# END htaccess

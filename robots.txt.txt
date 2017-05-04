@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /
+Disallow: /*gif$
+Disallow: /dashboard*/
+Calw-Delay:60
+Sitemap: http://localhost/tienda/tienda2/public.xml
+User-agent: Googlebot
+Allow: /*.css$
+Allow: /*.js$
+User-agent: Bingbot
+
+
